@@ -4,3 +4,4 @@ audio/Eng_test.mp3
 test.py
 transcribe_dialogue.ipynb
 .streamlit/secrets.toml
+.env
