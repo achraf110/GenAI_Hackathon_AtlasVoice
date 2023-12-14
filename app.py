@@ -1,13 +1,13 @@
 import streamlit as st
 from tempfile import NamedTemporaryFile
-from openai import OpenAI
+#from openai import OpenAI
 import assemblyai as aai
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-client = OpenAI() # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
+#client = OpenAI() # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
 
 
 def get_transcript(f):
