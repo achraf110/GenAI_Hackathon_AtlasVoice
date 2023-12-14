@@ -1,17 +1,17 @@
 import streamlit as st
 from tempfile import NamedTemporaryFile
-#from openai import OpenAI
+from openai import OpenAI
 import assemblyai as aai
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-#client = OpenAI() # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
+client = OpenAI() # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
 
 
 def get_transcript(f):
-    aai.settings.api_key = os.getenv('ASSAMBLY_API_KEY')
+    aai.settings.api_key = st.secrets['ASSAMBLY_API_KEY']
     config = aai.TranscriptionConfig(speaker_labels=True)
 
     transcriber = aai.Transcriber()   
@@ -65,6 +65,7 @@ if f :
         with st.expander("See Your Transcript"):
             for utterance in transcript.utterances:
                 st.write(f"Speaker {utterance.speaker}: {utterance.text}")
+        
 
         with st.expander('Summary of the tanscript'):
             prompt = '''Provide a Brief summaryr of the transcript, with some key take aways about the personality of the patient,
@@ -73,5 +74,5 @@ if f :
             result = transcript.lemur.task(prompt=prompt)
 
             st.write(result.response)
-            
+        
 
