@@ -2,10 +2,10 @@ import streamlit as st
 from tempfile import NamedTemporaryFile
 from openai import OpenAI
 import assemblyai as aai
-from dotenv import load_dotenv
+
 import os
 
-load_dotenv()
+
 
 client = OpenAI() # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
 
@@ -68,8 +68,7 @@ if f :
         
 
         with st.expander('Summary of the tanscript'):
-            prompt = '''Provide a Brief summaryr of the transcript, with some key take aways about the personality of the patient,
-                        the doctore is alwayse person_A and patient is always patient_B so distinguich between them.
+            prompt = '''Provide a Brief summaryr of the transcript, 
                     '''
             result = transcript.lemur.task(prompt=prompt)
 
