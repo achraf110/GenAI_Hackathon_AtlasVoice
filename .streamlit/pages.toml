@@ -1,0 +1,14 @@
+[[pages]]
+path = "./pages/1_Homepage.py"
+name = "Home"
+icon = ":house:"
+
+[[pages]]
+path = "./pages/2_Transcript.py"
+name = "Transcript"
+icon = "📜"
+
+[[pages]]
+path = "./pages/3_Chatbot.py"
+name = "Chatbot"
+icon = "🤖"
