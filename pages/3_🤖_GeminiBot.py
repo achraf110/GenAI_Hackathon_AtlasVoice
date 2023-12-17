@@ -6,7 +6,10 @@ import numpy as np
 import pandas as pd 
 import textwrap
 
-
+st.set_page_config(
+    page_title="AtlasVoice",
+    page_icon=":cyclone:"
+)
 
 with st.sidebar:
     st.success('''

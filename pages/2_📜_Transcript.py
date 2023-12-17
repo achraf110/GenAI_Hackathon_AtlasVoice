@@ -4,7 +4,10 @@ import assemblyai as aai
 
 import os
 
-
+st.set_page_config(
+    page_title="AtlasVoice",
+    page_icon=":cyclone:"
+)
 
 def get_transcript(f):
     aai.settings.api_key = st.secrets['ASSAMBLY_API_KEY']
@@ -21,7 +24,7 @@ f = None
 entered = None
 
 # Header 
-st.header('This is the :orange[AtlasVoice], Doctor Helper!', divider="orange")
+# st.header('This is the :orange[AtlasVoice], Doctor Helper!', divider="orange")
 
 
 # initialize hestory for summary and transcription 
@@ -33,7 +36,8 @@ if "summary" not in st.session_state:
     st.session_state['summary'] = []
 
 # store the uploaded file in a temporary file 
-f = st.file_uploader("File")
+st.markdown('## :orange[Upload] your audio file ')
+f = st.file_uploader("File",label_visibility="hidden")
 st.audio(f)
 if f :
     uploaded_file = f.name.split('.')[-1] # Ex: Eng_test.mp3 ==> split ===> ["Eng_test","mp3"] ==> take the last one 'mp3'
