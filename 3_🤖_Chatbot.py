@@ -1,13 +1,17 @@
 import streamlit as st 
 from openai import OpenAI
+import numpy as np
+import google.generativeai as gemi
 
+# client = OpenAI(api_key=st.secrets['OPENAI_API_KEY']) # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
 
-
-client = OpenAI(api_key=st.secrets['OPENAI_API_KEY']) # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
+# gemini_api = "AIzaSyD69xGb7NhVsY5fRUUlZvEULNWt0YqaY9c"
 
 # openai model
 if "openai_model" not in st.session_state:
     st.session_state['openai_model'] = 'gpt-3.5-turbo'
+
+
 
 # initializing a chat History
 if "messages" not in st.session_state:
