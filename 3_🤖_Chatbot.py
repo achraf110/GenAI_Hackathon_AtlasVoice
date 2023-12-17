@@ -10,8 +10,6 @@ import google.generativeai as gemi
 if "openai_model" not in st.session_state:
     st.session_state['openai_model'] = 'gpt-3.5-turbo'
 
-
-
 # initializing a chat History
 if "messages" not in st.session_state:
     st.session_state.messages = []
