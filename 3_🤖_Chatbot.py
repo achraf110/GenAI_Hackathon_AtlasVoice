@@ -5,7 +5,6 @@ import google.generativeai as gemi
 
 # client = OpenAI(api_key=st.secrets['OPENAI_API_KEY']) # upload the openAI Api key from .env file, the default variable is "OPENAI_API_KEY"
 
-# gemini_api = "AIzaSyD69xGb7NhVsY5fRUUlZvEULNWt0YqaY9c"
 
 # openai model
 if "openai_model" not in st.session_state:
