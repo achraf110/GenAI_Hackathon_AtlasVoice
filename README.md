@@ -1,19 +1,21 @@
-# AtlasVoice - GenAI-Hackathon 
+# AtlasVoice | MoroccoAI | 2023 GenAI Hackathon 
 
-## Project Status
-In pregress ...
+<p align="center">
+  <img src="./assets/images/app.gif" alt="animated" />
+</p>
 
 ## Description
-Our project will assist psychotherapist doctors in understanding their patients and reducing the time spent on each recorded audio file.
+**AtlasVoice** will assist psychotherapist doctors in understanding their patients and reducing the time spent on each recorded audio file.
 
-Problem:
+**Problem:**
 Psychotherapists often spend a significant amount of time listening to and analyzing recorded audio dialogues with their patients, which can be a time-consuming process.
 
-Solution:
+**Solution:**
 Develop a GenAI assistant, that utilizes speech recognition and NLP techniques to automatically transcribe, analyze, and summarize the recorded audio. The goal is to provide the psychotherapist with concise insights into the key elements of the conversation,
 
-## Demo
-It will be availabale by the end of the project! 
+## What's new  
+    Chatbot assitant reads your transcript, and help you solve your questions about the patient.
+
 
 ## Usage
 To reproduce, run the following commands:
@@ -40,4 +42,4 @@ streamlit run app.py
 ```
 
 ## License
-Loading...
+Loading ...

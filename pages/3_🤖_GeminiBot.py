@@ -6,6 +6,17 @@ import numpy as np
 import pandas as pd 
 import textwrap
 
+
+
+with st.sidebar:
+    st.success('''
+               Try out this question: 
+               > **What stops the patient from doing her job?**  
+               > Don't forget to say **Thank you**     
+               ''')
+    st.markdown("**Note**: if the Questions are not included in the passage it won't respond ")
+
+
 gemini_api = st.secrets['GEMINI_API_KEY']
 genai.configure(api_key=gemini_api)
 
